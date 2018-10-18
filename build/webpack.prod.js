@@ -14,6 +14,18 @@ module.exports = webpackMerge(baseConfig,{
         path: path.resolve(__dirname,'../','dist'),
         filename: 'js/[name].js'
     },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    miniCssExtractPlugin.loader,
+                    'css-loader',
+                    'postcss-loader'
+                ]
+            }
+        ]
+    },
     plugins: [
         new cleanWebpackPlugin(['dist'],{
             root: path.resolve(__dirname,'../'),

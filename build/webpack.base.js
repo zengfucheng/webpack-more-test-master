@@ -24,11 +24,6 @@ module.exports = {
         // port: 8080
     },
     entry: entryConfig,
-    //     {
-    //     // app: path.resolve(__dirname,'../src/index.js')
-    //     home: path.resolve(__dirname,'../src/view/home.js'),
-    //     about: path.resolve(__dirname,'../src/view/about.js')
-    // },
     output: {
         filename: 'js/[name].js',
         path: path.resolve(__dirname,'../dist'),
